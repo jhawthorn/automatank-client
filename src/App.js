@@ -4,9 +4,15 @@ import './App.css';
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <ul>
+      <Link to="/versus-ai">Play vs AI</Link>
+    </ul>
   </div>
 );
+
+const VsAi = () => (
+  <h1>Versus AI</h1>
+)
 
 class App extends Component {
   render() {
@@ -14,6 +20,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Home} />
+          <Route path="/versus-ai" component={VsAi} />
         </div>
       </Router>
     );
